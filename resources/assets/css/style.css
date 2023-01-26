@@ -1,0 +1,7 @@
+.needs-validation label {
+    opacity: 0.7;
+    margin-bottom: 10px; }
+  
+  .needs-validation .invalid-tooltip {
+    top: -35px;
+    right: 10px; }

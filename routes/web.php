@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// Posts
+Route::get('/posts', [PostsController::class, 'index']);
+Route::get('posts/newPost', [PostsController::class, 'create'])->name('newPost');
+Route::post('/posts', [PostsController::class, 'store'])->name('savePost');
+
+Route::get('/posts/{id}', [PostsController::class, 'show']);
